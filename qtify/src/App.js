@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+// import './App.css';
+import Navbar from "./components/Navbar/navBar";
+import HomePage from "./pages/homePage";
+import { StyledEngineProvider } from "@mui/material";
 
+import AlbumContainer from "./components/albumContainer/albumContainer";
+import { Outlet } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledEngineProvider>
+      <div>
+        <Navbar />
+        <Outlet />
+      </div>
+    </StyledEngineProvider>
   );
 }
 
 export default App;
+
+//{textLine1,textLine2,image}
